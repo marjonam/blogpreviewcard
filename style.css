@@ -47,28 +47,30 @@ img {
   z-index: -1;
 }
 
-.card img {
+.card-img {
   border-radius: 1rem;
 }
 
-.card .learning {
+.card .learning__button {
   background-color: var(--yellow);
   width: min-content;
   margin-top: 1.5rem;
   font-weight: 800;
-  border-radius: 4px;
-  gap: 8px;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
 }
 
-.card .date {
+.card__data {
   margin-top: 1rem;
 }
 
-.card h1 {
+.card__title {
   margin: 1rem 0;
 }
 
-.card h1 a {
+.card__link {
   color: var(--black);
   font-size: 1.5rem;
   font-weight: 800;
@@ -76,27 +78,27 @@ img {
   text-decoration: none;
 }
 
-.card h1 a:hover {
+.card__link:hover {
   color: var(--yellow);
 }
 
-.card .description {
+.card__description {
   color: var(--grey);
   line-height: 1.5;
 }
 
-.card .author {
+.card__author {
   margin-top: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.card .author img {
+.card__profilemen {
   width: 30px;
 }
 
-.card .author .name {
+.card__name {
   font-weight: 800;
 }
 
