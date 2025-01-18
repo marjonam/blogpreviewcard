@@ -3,107 +3,78 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-:root {
-  --yellow: hsl(47, 88%, 63%);
-  --white: hsl(0, 0%, 100%);
-  --grey: hsl(0, 0%, 50%);
-  --black: hsl(0, 0%, 4%);
+a {
+  text-decoration: none;
+  color: #111111;
 }
-
 body {
-  background-color: var(--yellow);
-  min-height: 100vh;
+  background-color: #f4d04e;
+  height: 100vh;
   font-family: "Figtree";
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-img {
-  width: 100%;
-  display: block;
-}
-
 .card {
-  background-color: var(--white);
-  max-width: 400px;
-  padding: 1.5rem;
-  margin: 1rem;
-  position: relative;
-  border-radius: 1rem;
-  outline: 1px solid #000;
-}
-
-.card::before {
-  content: attr();
-  display: block;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 24px;
+  max-width: 384px;
   width: 100%;
-  height: 100%;
-  background-color: var(--black);
-  position: absolute;
-  top: 15px;
-  right: -15px;
-  border-radius: 1rem;
-  z-index: -1;
-}
-
-.card-img {
-  border-radius: 1rem;
-}
-
-.card .learning__button {
-  background-color: var(--yellow);
-  width: min-content;
-  margin-top: 1.5rem;
-  font-weight: 800;
-  border-radius: 1px;
+  height: 522px;
   display: flex;
   flex-direction: column;
-  row-gap: 24px;
+  gap: 24px;
+  box-shadow: 16px 16px 0px 0px #000000;
 }
-
-.card__data {
-  margin-top: 1rem;
+.card__image {
+  width: 336px;
+  height: 200px;
 }
-
-.card__title {
-  margin: 1rem 0;
+.card__texts {
+  font-family: "Figtree";
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
-
-.card__link {
-  color: var(--black);
-  font-size: 1.5rem;
+.card__button {
+  background-color: #f4d04e;
+  width: 82px;
+  border-radius: 4px;
+  height: 29px;
+  padding: 4px 12px;
+  font-size: 14px;
   font-weight: 800;
-  line-height: 1;
-  text-decoration: none;
+  line-height: 21px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
 
-.card__link:hover {
-  color: var(--yellow);
+.card__time {
+  color: #111111;
 }
-
-.card__description {
-  color: var(--grey);
-  line-height: 1.5;
+.card__title {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 36px;
 }
-
-.card__author {
-  margin-top: 1rem;
+.card__title:hover {
+  color: #f4d04e;
+}
+.card__subtitle {
+  color: #7f7f7f;
+}
+.card__user {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 12px;
 }
-
-.card__profilemen {
-  width: 30px;
-}
-
-.card__name {
+.card__user-title {
+  font-size: 14px;
   font-weight: 800;
-}
-
-@media (max-width: 375px) {
-  .card h1 a {
-    font-size: 1.25px;
-  }
+  line-height: 21px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
