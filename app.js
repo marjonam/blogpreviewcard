@@ -1,50 +1,33 @@
 const body = document.body;
-function createElement(tag, options = {}) {
-  const element = document.createElement(tag);
-  if (options.className) element.classList.add(...options.className.split(" "));
-  if (options.textContent) element.textContent = options.textContent;
-  if (options.src) element.src = options.src;
-  if (options.href) element.href = options.href;
-  return element;
-}
-const card = createElement("div", { className: "card" });
-const image = createElement("img", {
-  className: "card__image",
-  src: "./img/blogimage.png",
-});
-const cardText = createElement("div", {
-  className: "card__texts",
-});
-const cardBtn = createElement("p", {
-  className: "card__button",
-  textContent: "Learning",
-});
-const cardTime = createElement("time", {
-  className: "card__time",
-  textContent: "Published 21 Dec 2025",
-});
-const cardTitle = createElement("a", {
-  className: "card__title",
-  textContent: "HTML & CSS foundations",
-  href: "#",
-});
-const cardSubtitle = createElement("p", {
-  className: "card__subtitle",
-  textContent:
-    "These languages are the backbone of every website, defining structure, content, and presentation.",
-});
-const cardUser = createElement("div", {
-  className: "card__user",
-});
-const cardUserLogo = createElement("img", {
-  className: "card__user-logo",
-  src: "./img/userpic-img.png",
-});
-const cardUserTItle = createElement("h4", {
-  className: "card__user-title",
-  textContent: "Greg Hooper",
-});
-cardText.append(cardBtn, cardTime, cardTitle, cardSubtitle);
-cardUser.append(cardUserLogo, cardUserTItle);
-card.append(image, cardText, cardUser);
+const card = document.createElement("div");
+const cardImg = document.createElement("img");
+const cardInfo = document.createElement("span");
+const cardDate = document.createElement("time");
+const cardTitle = document.createElement("h2");
+const cardDesc = document.createElement("p");
+const cardProfile = document.createElement("div");
+const cardProfileImg = document.createElement("img");
+const cardProfileName = document.createElement("h3");
+const a = document.createElement("a");
+card.classList.add("card");
+cardImg.classList.add("card__img");
+cardInfo.classList.add("card__info");
+cardDate.classList.add("card__date");
+cardTitle.classList.add("card__title");
+cardDesc.classList.add("card__description");
+cardProfile.classList.add("card__profile");
+cardProfileImg.classList.add("card__profile__img");
+cardProfileName.classList.add("card__profile__name");
+cardImg.setAttribute("src", "./img/blogimage.png");
+cardProfileImg.setAttribute("src", "./img/userpic-img.png");
+cardDate.setAttribute("datetime", "2021-01-21");
+cardInfo.textContent = "Learning";
+cardDate.textContent = "Published 21 Dec 2023";
+a.textContent = "HTML & CSS foundations";
+cardDesc.textContent =
+  "These languages are the backbone of every website, defining structure, content, and presentation.";
+cardProfileName.textContent = "Greg Hooper";
+cardTitle.appendChild(a);
+cardProfile.append(cardProfileImg, cardProfileName);
+card.append(cardImg, cardInfo, cardDate, cardTitle, cardDesc, cardProfile);
 body.appendChild(card);

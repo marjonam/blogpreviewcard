@@ -16,65 +16,60 @@ body {
   align-items: center;
 }
 .card {
-  border-radius: 20px;
-  background-color: #fff;
+  width: 384px;
+  border: 1px solid black;
   padding: 24px;
-  max-width: 384px;
-  width: 100%;
-  height: 522px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  box-shadow: 16px 16px 0px 0px #000000;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 0px #111111;
 }
-.card__image {
-  width: 336px;
-  height: 200px;
-}
-.card__texts {
-  font-family: "Figtree";
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.card__button {
-  background-color: #f4d04e;
-  width: 82px;
-  border-radius: 4px;
-  height: 29px;
+.card__info {
   padding: 4px 12px;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 21px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  display: inline-block;
+  background: #f4d04e;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  font-weight: 900;
+  font-family: "Figtree";
 }
-
-.card__time {
-  color: #111111;
+.card__date {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "Figtree";
+  display: block;
 }
 .card__title {
-  font-size: 24px;
   font-weight: 800;
+  font-size: 24px;
   line-height: 36px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
-.card__title:hover {
+.card__title a {
+  color: #111111;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.card__title a:hover {
   color: #f4d04e;
 }
-.card__subtitle {
+.card__description {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
   color: #7f7f7f;
+  padding-bottom: 24px;
 }
-.card__user {
+.card__profile {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
 }
-.card__user-title {
+.card__profile__name {
   font-size: 14px;
   font-weight: 800;
   line-height: 21px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  color: #111111;
 }
